@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Tue Jan 24 19:15:39 2023
+# Process ID: 22347
+# Current directory: /home/smarumot/alveo_firm/kernel_design/fw_sl2/project_1/project_1.runs/dcm40_to_320_synth_1
+# Command line: vivado -log dcm40_to_320.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dcm40_to_320.tcl
+# Log file: /home/smarumot/alveo_firm/kernel_design/fw_sl2/project_1/project_1.runs/dcm40_to_320_synth_1/dcm40_to_320.vds
+# Journal file: /home/smarumot/alveo_firm/kernel_design/fw_sl2/project_1/project_1.runs/dcm40_to_320_synth_1/vivado.jou
+# Running On: accel1, OS: Linux, CPU Frequency: 1500.061 MHz, CPU Physical cores: 12, Host memory: 67215 MB
+#-----------------------------------------------------------
+source dcm40_to_320.tcl -notrace

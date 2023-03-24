@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../project_1.gen/sources_1/ip/LUT_ptTDP_1/sim/LUT_ptTDP.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

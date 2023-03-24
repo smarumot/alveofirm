@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="LUT_ptTDP_synth_1" LaunchPart="xcu200-fsgd2104-2-e" LaunchTime="1673969035">
+  <File Type="REPORTS-TCL" Name="LUT_ptTDP_reports.tcl"/>
+  <File Type="PA-TCL" Name="LUT_ptTDP.tcl"/>
+  <File Type="RDS-DCP" Name="LUT_ptTDP.dcp"/>
+  <File Type="RDS-RDS" Name="LUT_ptTDP.vds"/>
+  <File Type="RDS-UTIL" Name="LUT_ptTDP_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="LUT_ptTDP_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LUT_ptTDP">
+    <File Path="$PSRCDIR/sources_1/ip/LUT_ptTDP_1/LUT_ptTDP.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="LUT_ptTDP"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/LUT_ptTDP">
+    <File Path="$PSRCDIR/sources_1/ip/LUT_ptTDP_1/LUT_ptTDP.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="LUT_ptTDP"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

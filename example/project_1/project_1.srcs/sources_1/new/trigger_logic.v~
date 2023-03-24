@@ -1,0 +1,106 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 01/12/2023 12:28:08 AM
+// Design Name: 
+// Module Name: trigger_logic
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+/*
+   input wire  clk,
+   input wire  reset_in,
+   input wire [6:0] BW_R,
+   input wire [5:0] BW_Phi0,
+   input wire [5:0] BW_Phi1,
+   input wire [5:0] BW_Phi2,
+   input wire [5:0] BW_Phi3,
+
+   input wire isAside,
+   input wire [7:0] HotROIdef,
+   
+   input wire [4:0] LUT_init_data_in,
+   input wire [13:0] LUT_init_Address_in,
+   input wire LUT_init_flg_in,
+   input wire [1:0] LUT_init_mode_in,
+   
+   input wire [13:0] LUT_rd_address_in,
+   input wire [3:0] LUT_rd_type_in,
+   input wire LUT_rd_R_in,
+   input wire [1:0] LUt_rd_Phi_in,
+   output wire [4:0] LUT_rd_data_out,
+   
+   output reg [9:0] trig_SSC_BW
+*/
+
+module trigger_logic(
+   input wire  clk,
+   input wire  reset,
+   input wire [31:0]  data_in,
+   input wire [31:0] data_LUT,
+   output wire signed [31:0] data_out
+);
+
+//wire list from LUT input
+wire [13:0] LUT_address;
+wire LUT_flag_w;
+wire [4:0] LUT_data;
+wire LUT_flag_rd;
+
+//wire list from data input
+wire [4:0] dina;
+
+//wire list for data output
+wire [4:0] douta;
+
+//wire list for LUT output
+wire [4:0] LUT_data_out;
+
+assign LUT_data = data_LUT[4:0];
+assign LUT_address = data_LUT[18:5];
+
+                     
+assign LUT_flag_w = data_LUT[19];
+assign LUT_flag_rd = data_LUT[20];   
+
+assign dina = data_in[4:0];
+
+
+wire ena = 1'b1;
+wire enb = 1'b1;
+wire wea = 1'b0;
+    
+BRAM brock_memory (
+  .clka(clk),    // input wire clka
+  .ena(ena),      // input wire ena
+  .wea(wea),      // input wire [0 : 0] wea
+  .addra(LUT_address),  // input wire [11 : 0] addra
+  .dina(5'b0),
+  .douta(douta),    // input wire [63 : 0] dina
+  .clkb(clk),    // input wire clkb
+  .enb(enb),      // input wire enb
+  .web(LUT_flag_w),      // input wire [0 : 0] web
+  .addrb(LUT_address),  // input wire [13 : 0] addrb
+  .dinb(LUT_data),    // input wire [4 : 0] dinb
+  .doutb(LUT_data_out)  // output wire [4 : 0] doutb
+);
+
+assign data_out = (LUT_flag_rd) ? $signed({LUT_data_out[4],LUT_data_out[3:0]}) :
+                  5'b0;
+   
+    
+    
+endmodule
+
+`default_nettype wire

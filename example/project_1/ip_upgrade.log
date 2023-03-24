@@ -1,0 +1,1331 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 24 19:15:29 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'dcm40_to_320'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of dcm40_to_320 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 5) to (Rev. 9)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'CLKOUT2_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'CLKOUT3_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'CLKOUT4_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'CLKOUT5_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'CLKOUT6_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'CLKOUT7_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '30.000' to '24.000' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'MMCM_COMPENSATION' from 'AUTO' to 'ZHOLD' has been ignored for IP 'dcm40_to_320'
+
+An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '3.750' to '3.000' has been ignored for IP 'dcm40_to_320'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:clk_wiz:6.0 -user_name dcm40_to_320
+set_property -dict "\
+  CONFIG.AUTO_PRIMITIVE {MMCM} \
+  CONFIG.AXI_DRP {false} \
+  CONFIG.CALC_DONE {empty} \
+  CONFIG.CDDCDONE_PORT {cddcdone} \
+  CONFIG.CDDCREQ_PORT {cddcreq} \
+  CONFIG.CLKFB_IN_D.CAN_DEBUG {false} \
+  CONFIG.CLKFB_IN_D.FREQ_HZ {100000000} \
+  CONFIG.CLKFB_IN_N_PORT {clkfb_in_n} \
+  CONFIG.CLKFB_IN_PORT {clkfb_in} \
+  CONFIG.CLKFB_IN_P_PORT {clkfb_in_p} \
+  CONFIG.CLKFB_IN_SIGNALING {SINGLE} \
+  CONFIG.CLKFB_OUT_D.CAN_DEBUG {false} \
+  CONFIG.CLKFB_OUT_D.FREQ_HZ {100000000} \
+  CONFIG.CLKFB_OUT_N_PORT {clkfb_out_n} \
+  CONFIG.CLKFB_OUT_PORT {clkfb_out} \
+  CONFIG.CLKFB_OUT_P_PORT {clkfb_out_p} \
+  CONFIG.CLKFB_STOPPED_PORT {clkfb_stopped} \
+  CONFIG.CLKIN1_JITTER_PS {250.0} \
+  CONFIG.CLKIN1_UI_JITTER {0.010} \
+  CONFIG.CLKIN2_JITTER_PS {100.0} \
+  CONFIG.CLKIN2_UI_JITTER {0.010} \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {151.082} \
+  CONFIG.CLKOUT1_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT1_PHASE_ERROR {196.976} \
+  CONFIG.CLKOUT1_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {320.000} \
+  CONFIG.CLKOUT1_REQUESTED_PHASE {240} \
+  CONFIG.CLKOUT1_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT1_USED {true} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT2_JITTER {0.0} \
+  CONFIG.CLKOUT2_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT2_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT2_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT2_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT2_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT2_USED {false} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_JITTER {0.0} \
+  CONFIG.CLKOUT3_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT3_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT3_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT3_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT3_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT3_USED {false} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_JITTER {0.0} \
+  CONFIG.CLKOUT4_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT4_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT4_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT4_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT4_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT4_USED {false} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_JITTER {0.0} \
+  CONFIG.CLKOUT5_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT5_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT5_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT5_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT5_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT5_USED {false} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_JITTER {0.0} \
+  CONFIG.CLKOUT6_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT6_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT6_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT6_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT6_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT6_USED {false} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_JITTER {0.0} \
+  CONFIG.CLKOUT7_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT7_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT7_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT7_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT7_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT7_USED {false} \
+  CONFIG.CLKOUTPHY_REQUESTED_FREQ {600.000} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN1_D.BOARD.ASSOCIATED_PARAM {CLK_IN1_BOARD_INTERFACE} \
+  CONFIG.CLK_IN1_D.CAN_DEBUG {false} \
+  CONFIG.CLK_IN1_D.FREQ_HZ {100000000} \
+  CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN2_D.BOARD.ASSOCIATED_PARAM {CLK_IN2_BOARD_INTERFACE} \
+  CONFIG.CLK_IN2_D.CAN_DEBUG {false} \
+  CONFIG.CLK_IN2_D.FREQ_HZ {100000000} \
+  CONFIG.CLK_IN_SEL_PORT {clk_in_sel} \
+  CONFIG.CLK_OUT1_PORT {clk320} \
+  CONFIG.CLK_OUT1_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT2_PORT {clk_out2} \
+  CONFIG.CLK_OUT2_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT3_PORT {clk_out3} \
+  CONFIG.CLK_OUT3_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT4_PORT {clk_out4} \
+  CONFIG.CLK_OUT4_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT5_PORT {clk_out5} \
+  CONFIG.CLK_OUT5_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT6_PORT {clk_out6} \
+  CONFIG.CLK_OUT6_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT7_PORT {clk_out7} \
+  CONFIG.CLK_OUT7_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_VALID_PORT {CLK_VALID} \
+  CONFIG.CLOCK_MGR_TYPE {auto} \
+  CONFIG.Component_Name {dcm40_to_320} \
+  CONFIG.DADDR_PORT {daddr} \
+  CONFIG.DCLK_PORT {dclk} \
+  CONFIG.DEN_PORT {den} \
+  CONFIG.DIFF_CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.DIFF_CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.DIN_PORT {din} \
+  CONFIG.DOUT_PORT {dout} \
+  CONFIG.DRDY_PORT {drdy} \
+  CONFIG.DWE_PORT {dwe} \
+  CONFIG.ENABLE_CDDC {false} \
+  CONFIG.ENABLE_CLKOUTPHY {false} \
+  CONFIG.ENABLE_CLOCK_MONITOR {false} \
+  CONFIG.ENABLE_USER_CLOCK0 {false} \
+  CONFIG.ENABLE_USER_CLOCK1 {false} \
+  CONFIG.ENABLE_USER_CLOCK2 {false} \
+  CONFIG.ENABLE_USER_CLOCK3 {false} \
+  CONFIG.Enable_PLL0 {false} \
+  CONFIG.Enable_PLL1 {false} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.INPUT_CLK_STOPPED_PORT {input_clk_stopped} \
+  CONFIG.INPUT_MODE {frequency} \
+  CONFIG.INTERFACE_SELECTION {Enable_AXI} \
+  CONFIG.IN_FREQ_UNITS {Units_MHz} \
+  CONFIG.IN_JITTER_UNITS {Units_UI} \
+  CONFIG.JITTER_OPTIONS {UI} \
+  CONFIG.JITTER_SEL {No_Jitter} \
+  CONFIG.LOCKED_PORT {locked} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
+  CONFIG.MMCM_CLKFBOUT_PHASE {0.000} \
+  CONFIG.MMCM_CLKFBOUT_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKIN1_PERIOD {25.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.000} \
+  CONFIG.MMCM_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT0_PHASE {240.000} \
+  CONFIG.MMCM_CLKOUT0_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT1_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT1_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT2_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT2_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT3_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT3_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT4_CASCADE {false} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT4_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT4_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT5_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT5_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT6_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT6_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT6_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT6_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLOCK_HOLD {false} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+  CONFIG.MMCM_NOTES {None} \
+  CONFIG.MMCM_REF_JITTER1 {0.010} \
+  CONFIG.MMCM_REF_JITTER2 {0.010} \
+  CONFIG.MMCM_STARTUP_WAIT {false} \
+  CONFIG.NUM_OUT_CLKS {1} \
+  CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {false} \
+  CONFIG.OVERRIDE_MMCM {false} \
+  CONFIG.OVERRIDE_PLL {false} \
+  CONFIG.PHASESHIFT_MODE {WAVEFORM} \
+  CONFIG.PHASE_DUTY_CONFIG {false} \
+  CONFIG.PLATFORM {UNKNOWN} \
+  CONFIG.PLL_BANDWIDTH {OPTIMIZED} \
+  CONFIG.PLL_CLKFBOUT_MULT {4} \
+  CONFIG.PLL_CLKFBOUT_PHASE {0.000} \
+  CONFIG.PLL_CLKIN_PERIOD {10.000} \
+  CONFIG.PLL_CLKOUT0_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT0_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT1_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT1_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT2_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT2_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT3_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT3_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT4_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT4_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT5_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT5_PHASE {0.000} \
+  CONFIG.PLL_CLK_FEEDBACK {CLKFBOUT} \
+  CONFIG.PLL_COMPENSATION {SYSTEM_SYNCHRONOUS} \
+  CONFIG.PLL_DIVCLK_DIVIDE {1} \
+  CONFIG.PLL_NOTES {None} \
+  CONFIG.PLL_REF_JITTER {0.010} \
+  CONFIG.POWER_DOWN_PORT {power_down} \
+  CONFIG.PRECISION {1} \
+  CONFIG.PRIMARY_PORT {clk_in} \
+  CONFIG.PRIMITIVE {MMCM} \
+  CONFIG.PRIMTYPE_SEL {mmcm_adv} \
+  CONFIG.PRIM_IN_FREQ {40} \
+  CONFIG.PRIM_IN_JITTER {0.010} \
+  CONFIG.PRIM_IN_TIMEPERIOD {10.000} \
+  CONFIG.PRIM_SOURCE {Global_buffer} \
+  CONFIG.PSCLK_PORT {psclk} \
+  CONFIG.PSDONE_PORT {psdone} \
+  CONFIG.PSEN_PORT {psen} \
+  CONFIG.PSINCDEC_PORT {psincdec} \
+  CONFIG.REF_CLK_FREQ {100.0} \
+  CONFIG.RELATIVE_INCLK {REL_PRIMARY} \
+  CONFIG.RESET_BOARD_INTERFACE {Custom} \
+  CONFIG.RESET_PORT {reset} \
+  CONFIG.RESET_TYPE {ACTIVE_HIGH} \
+  CONFIG.SECONDARY_IN_FREQ {100.000} \
+  CONFIG.SECONDARY_IN_JITTER {0.010} \
+  CONFIG.SECONDARY_IN_TIMEPERIOD {10.000} \
+  CONFIG.SECONDARY_PORT {clk_in2} \
+  CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.SS_MODE {CENTER_HIGH} \
+  CONFIG.SS_MOD_FREQ {250} \
+  CONFIG.SS_MOD_TIME {0.004} \
+  CONFIG.STATUS_PORT {STATUS} \
+  CONFIG.SUMMARY_STRINGS {empty} \
+  CONFIG.USER_CLK_FREQ0 {100.0} \
+  CONFIG.USER_CLK_FREQ1 {100.0} \
+  CONFIG.USER_CLK_FREQ2 {100.0} \
+  CONFIG.USER_CLK_FREQ3 {100.0} \
+  CONFIG.USE_BOARD_FLOW {false} \
+  CONFIG.USE_CLKFB_STOPPED {false} \
+  CONFIG.USE_CLK_VALID {false} \
+  CONFIG.USE_CLOCK_SEQUENCING {false} \
+  CONFIG.USE_DYN_PHASE_SHIFT {false} \
+  CONFIG.USE_DYN_RECONFIG {false} \
+  CONFIG.USE_FREEZE {false} \
+  CONFIG.USE_FREQ_SYNTH {true} \
+  CONFIG.USE_INCLK_STOPPED {false} \
+  CONFIG.USE_INCLK_SWITCHOVER {false} \
+  CONFIG.USE_LOCKED {true} \
+  CONFIG.USE_MAX_I_JITTER {false} \
+  CONFIG.USE_MIN_O_JITTER {false} \
+  CONFIG.USE_MIN_POWER {false} \
+  CONFIG.USE_PHASE_ALIGNMENT {true} \
+  CONFIG.USE_POWER_DOWN {false} \
+  CONFIG.USE_RESET {true} \
+  CONFIG.USE_SAFE_CLOCK_STARTUP {false} \
+  CONFIG.USE_SPREAD_SPECTRUM {false} \
+  CONFIG.USE_STATUS {false} \
+  CONFIG.intr.PortWidth {1} \
+  CONFIG.intr.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.ref_clk.ASSOCIATED_BUSIF {} \
+  CONFIG.ref_clk.ASSOCIATED_PORT {} \
+  CONFIG.ref_clk.ASSOCIATED_RESET {} \
+  CONFIG.ref_clk.CLK_DOMAIN {} \
+  CONFIG.ref_clk.FREQ_HZ {100000000} \
+  CONFIG.ref_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.ref_clk.INSERT_VIP {0} \
+  CONFIG.ref_clk.PHASE {0.000} \
+  CONFIG.reset.BOARD.ASSOCIATED_PARAM {RESET_BOARD_INTERFACE} \
+  CONFIG.reset.INSERT_VIP {0} \
+  CONFIG.reset.POLARITY {ACTIVE_HIGH} \
+  CONFIG.resetn.BOARD.ASSOCIATED_PARAM {RESET_BOARD_INTERFACE} \
+  CONFIG.resetn.INSERT_VIP {0} \
+  CONFIG.resetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {s_axi_lite} \
+  CONFIG.s_axi_aclk.ASSOCIATED_PORT {} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_lite.ADDR_WIDTH {1} \
+  CONFIG.s_axi_lite.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.BUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.CLK_DOMAIN {} \
+  CONFIG.s_axi_lite.DATA_WIDTH {1} \
+  CONFIG.s_axi_lite.FREQ_HZ {100000000} \
+  CONFIG.s_axi_lite.HAS_BRESP {0} \
+  CONFIG.s_axi_lite.HAS_BURST {0} \
+  CONFIG.s_axi_lite.HAS_CACHE {0} \
+  CONFIG.s_axi_lite.HAS_LOCK {0} \
+  CONFIG.s_axi_lite.HAS_PROT {0} \
+  CONFIG.s_axi_lite.HAS_QOS {0} \
+  CONFIG.s_axi_lite.HAS_REGION {0} \
+  CONFIG.s_axi_lite.HAS_RRESP {0} \
+  CONFIG.s_axi_lite.HAS_WSTRB {0} \
+  CONFIG.s_axi_lite.ID_WIDTH {0} \
+  CONFIG.s_axi_lite.INSERT_VIP {0} \
+  CONFIG.s_axi_lite.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_lite.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_lite.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_lite.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_lite.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_lite.PHASE {0.000} \
+  CONFIG.s_axi_lite.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_lite.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_lite.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_lite.RUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_lite.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_lite.WUSER_WIDTH {0} \
+  CONFIG.s_axi_resetn.ASSOCIATED_RESET {aresetn} \
+  CONFIG.s_axi_resetn.INSERT_VIP {0} \
+  CONFIG.s_axi_resetn.POLARITY {ACTIVE_LOW} " [get_ips dcm40_to_320]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 24 19:15:05 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'dcm40_to_160'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of dcm40_to_160 (xilinx.com:ip:clk_wiz:6.0) from (Rev. 5) to (Rev. 9)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+An attempt to modify the value of disabled parameter 'CLKOUT2_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'CLKOUT3_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'CLKOUT4_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'CLKOUT5_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'CLKOUT6_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'CLKOUT7_DRIVES' from 'Buffer' to 'BUFG' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'MMCM_CLKFBOUT_MULT_F' from '30.000' to '24.000' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'MMCM_COMPENSATION' from 'AUTO' to 'ZHOLD' has been ignored for IP 'dcm40_to_160'
+
+An attempt to modify the value of disabled parameter 'MMCM_CLKOUT0_DIVIDE_F' from '7.500' to '6.000' has been ignored for IP 'dcm40_to_160'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:clk_wiz:6.0 -user_name dcm40_to_160
+set_property -dict "\
+  CONFIG.AUTO_PRIMITIVE {MMCM} \
+  CONFIG.AXI_DRP {false} \
+  CONFIG.CALC_DONE {empty} \
+  CONFIG.CDDCDONE_PORT {cddcdone} \
+  CONFIG.CDDCREQ_PORT {cddcreq} \
+  CONFIG.CLKFB_IN_D.CAN_DEBUG {false} \
+  CONFIG.CLKFB_IN_D.FREQ_HZ {100000000} \
+  CONFIG.CLKFB_IN_N_PORT {clkfb_in_n} \
+  CONFIG.CLKFB_IN_PORT {clkfb_in} \
+  CONFIG.CLKFB_IN_P_PORT {clkfb_in_p} \
+  CONFIG.CLKFB_IN_SIGNALING {SINGLE} \
+  CONFIG.CLKFB_OUT_D.CAN_DEBUG {false} \
+  CONFIG.CLKFB_OUT_D.FREQ_HZ {100000000} \
+  CONFIG.CLKFB_OUT_N_PORT {clkfb_out_n} \
+  CONFIG.CLKFB_OUT_PORT {clkfb_out} \
+  CONFIG.CLKFB_OUT_P_PORT {clkfb_out_p} \
+  CONFIG.CLKFB_STOPPED_PORT {clkfb_stopped} \
+  CONFIG.CLKIN1_JITTER_PS {250.0} \
+  CONFIG.CLKIN1_UI_JITTER {0.010} \
+  CONFIG.CLKIN2_JITTER_PS {100.0} \
+  CONFIG.CLKIN2_UI_JITTER {0.010} \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {169.112} \
+  CONFIG.CLKOUT1_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT1_PHASE_ERROR {196.976} \
+  CONFIG.CLKOUT1_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {160} \
+  CONFIG.CLKOUT1_REQUESTED_PHASE {270} \
+  CONFIG.CLKOUT1_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT1_USED {true} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT2_JITTER {171.779} \
+  CONFIG.CLKOUT2_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT2_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT2_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT2_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT2_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT2_USED {false} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_JITTER {158.299} \
+  CONFIG.CLKOUT3_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT3_PHASE_ERROR {191.950} \
+  CONFIG.CLKOUT3_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT3_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT3_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT3_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT3_USED {false} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_JITTER {0.0} \
+  CONFIG.CLKOUT4_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT4_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT4_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT4_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT4_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT4_USED {false} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_JITTER {0.0} \
+  CONFIG.CLKOUT5_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT5_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT5_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT5_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT5_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT5_USED {false} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_JITTER {0.0} \
+  CONFIG.CLKOUT6_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT6_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT6_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT6_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT6_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT6_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT6_USED {false} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_JITTER {0.0} \
+  CONFIG.CLKOUT7_MATCHED_ROUTING {false} \
+  CONFIG.CLKOUT7_PHASE_ERROR {0.0} \
+  CONFIG.CLKOUT7_REQUESTED_DUTY_CYCLE {50.000} \
+  CONFIG.CLKOUT7_REQUESTED_OUT_FREQ {100.000} \
+  CONFIG.CLKOUT7_REQUESTED_PHASE {0.000} \
+  CONFIG.CLKOUT7_SEQUENCE_NUMBER {1} \
+  CONFIG.CLKOUT7_USED {false} \
+  CONFIG.CLKOUTPHY_REQUESTED_FREQ {600.000} \
+  CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN1_D.BOARD.ASSOCIATED_PARAM {CLK_IN1_BOARD_INTERFACE} \
+  CONFIG.CLK_IN1_D.CAN_DEBUG {false} \
+  CONFIG.CLK_IN1_D.FREQ_HZ {100000000} \
+  CONFIG.CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.CLK_IN2_D.BOARD.ASSOCIATED_PARAM {CLK_IN2_BOARD_INTERFACE} \
+  CONFIG.CLK_IN2_D.CAN_DEBUG {false} \
+  CONFIG.CLK_IN2_D.FREQ_HZ {100000000} \
+  CONFIG.CLK_IN_SEL_PORT {clk_in_sel} \
+  CONFIG.CLK_OUT1_PORT {clk160} \
+  CONFIG.CLK_OUT1_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT2_PORT {clk_out2} \
+  CONFIG.CLK_OUT2_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT3_PORT {clk_out3} \
+  CONFIG.CLK_OUT3_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT4_PORT {clk_out4} \
+  CONFIG.CLK_OUT4_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT5_PORT {clk_out5} \
+  CONFIG.CLK_OUT5_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT6_PORT {clk_out6} \
+  CONFIG.CLK_OUT6_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_OUT7_PORT {clk_out7} \
+  CONFIG.CLK_OUT7_USE_FINE_PS_GUI {false} \
+  CONFIG.CLK_VALID_PORT {CLK_VALID} \
+  CONFIG.CLOCK_MGR_TYPE {auto} \
+  CONFIG.Component_Name {dcm40_to_160} \
+  CONFIG.DADDR_PORT {daddr} \
+  CONFIG.DCLK_PORT {dclk} \
+  CONFIG.DEN_PORT {den} \
+  CONFIG.DIFF_CLK_IN1_BOARD_INTERFACE {Custom} \
+  CONFIG.DIFF_CLK_IN2_BOARD_INTERFACE {Custom} \
+  CONFIG.DIN_PORT {din} \
+  CONFIG.DOUT_PORT {dout} \
+  CONFIG.DRDY_PORT {drdy} \
+  CONFIG.DWE_PORT {dwe} \
+  CONFIG.ENABLE_CDDC {false} \
+  CONFIG.ENABLE_CLKOUTPHY {false} \
+  CONFIG.ENABLE_CLOCK_MONITOR {false} \
+  CONFIG.ENABLE_USER_CLOCK0 {false} \
+  CONFIG.ENABLE_USER_CLOCK1 {false} \
+  CONFIG.ENABLE_USER_CLOCK2 {false} \
+  CONFIG.ENABLE_USER_CLOCK3 {false} \
+  CONFIG.Enable_PLL0 {false} \
+  CONFIG.Enable_PLL1 {false} \
+  CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
+  CONFIG.INPUT_CLK_STOPPED_PORT {input_clk_stopped} \
+  CONFIG.INPUT_MODE {frequency} \
+  CONFIG.INTERFACE_SELECTION {Enable_AXI} \
+  CONFIG.IN_FREQ_UNITS {Units_MHz} \
+  CONFIG.IN_JITTER_UNITS {Units_UI} \
+  CONFIG.JITTER_OPTIONS {UI} \
+  CONFIG.JITTER_SEL {No_Jitter} \
+  CONFIG.LOCKED_PORT {locked} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} \
+  CONFIG.MMCM_CLKFBOUT_PHASE {0.000} \
+  CONFIG.MMCM_CLKFBOUT_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKIN1_PERIOD {25.000} \
+  CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} \
+  CONFIG.MMCM_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT0_PHASE {270.000} \
+  CONFIG.MMCM_CLKOUT0_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT1_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT1_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT2_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT2_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT2_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT3_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT3_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT4_CASCADE {false} \
+  CONFIG.MMCM_CLKOUT4_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT4_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT4_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT5_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT5_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT5_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLKOUT6_DIVIDE {1} \
+  CONFIG.MMCM_CLKOUT6_DUTY_CYCLE {0.500} \
+  CONFIG.MMCM_CLKOUT6_PHASE {0.000} \
+  CONFIG.MMCM_CLKOUT6_USE_FINE_PS {false} \
+  CONFIG.MMCM_CLOCK_HOLD {false} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+  CONFIG.MMCM_NOTES {None} \
+  CONFIG.MMCM_REF_JITTER1 {0.010} \
+  CONFIG.MMCM_REF_JITTER2 {0.010} \
+  CONFIG.MMCM_STARTUP_WAIT {false} \
+  CONFIG.NUM_OUT_CLKS {1} \
+  CONFIG.OPTIMIZE_CLOCKING_STRUCTURE_EN {false} \
+  CONFIG.OVERRIDE_MMCM {false} \
+  CONFIG.OVERRIDE_PLL {false} \
+  CONFIG.PHASESHIFT_MODE {WAVEFORM} \
+  CONFIG.PHASE_DUTY_CONFIG {false} \
+  CONFIG.PLATFORM {UNKNOWN} \
+  CONFIG.PLL_BANDWIDTH {OPTIMIZED} \
+  CONFIG.PLL_CLKFBOUT_MULT {4} \
+  CONFIG.PLL_CLKFBOUT_PHASE {0.000} \
+  CONFIG.PLL_CLKIN_PERIOD {10.000} \
+  CONFIG.PLL_CLKOUT0_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT0_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT0_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT1_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT1_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT1_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT2_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT2_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT2_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT3_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT3_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT3_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT4_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT4_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT4_PHASE {0.000} \
+  CONFIG.PLL_CLKOUT5_DIVIDE {1} \
+  CONFIG.PLL_CLKOUT5_DUTY_CYCLE {0.500} \
+  CONFIG.PLL_CLKOUT5_PHASE {0.000} \
+  CONFIG.PLL_CLK_FEEDBACK {CLKFBOUT} \
+  CONFIG.PLL_COMPENSATION {SYSTEM_SYNCHRONOUS} \
+  CONFIG.PLL_DIVCLK_DIVIDE {1} \
+  CONFIG.PLL_NOTES {None} \
+  CONFIG.PLL_REF_JITTER {0.010} \
+  CONFIG.POWER_DOWN_PORT {power_down} \
+  CONFIG.PRECISION {1} \
+  CONFIG.PRIMARY_PORT {clk_in} \
+  CONFIG.PRIMITIVE {MMCM} \
+  CONFIG.PRIMTYPE_SEL {mmcm_adv} \
+  CONFIG.PRIM_IN_FREQ {40} \
+  CONFIG.PRIM_IN_JITTER {0.010} \
+  CONFIG.PRIM_IN_TIMEPERIOD {10.000} \
+  CONFIG.PRIM_SOURCE {Global_buffer} \
+  CONFIG.PSCLK_PORT {psclk} \
+  CONFIG.PSDONE_PORT {psdone} \
+  CONFIG.PSEN_PORT {psen} \
+  CONFIG.PSINCDEC_PORT {psincdec} \
+  CONFIG.REF_CLK_FREQ {100.0} \
+  CONFIG.RELATIVE_INCLK {REL_PRIMARY} \
+  CONFIG.RESET_BOARD_INTERFACE {Custom} \
+  CONFIG.RESET_PORT {reset} \
+  CONFIG.RESET_TYPE {ACTIVE_HIGH} \
+  CONFIG.SECONDARY_IN_FREQ {100.000} \
+  CONFIG.SECONDARY_IN_JITTER {0.010} \
+  CONFIG.SECONDARY_IN_TIMEPERIOD {10.000} \
+  CONFIG.SECONDARY_PORT {clk_in2} \
+  CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
+  CONFIG.SS_MODE {CENTER_HIGH} \
+  CONFIG.SS_MOD_FREQ {250} \
+  CONFIG.SS_MOD_TIME {0.004} \
+  CONFIG.STATUS_PORT {STATUS} \
+  CONFIG.SUMMARY_STRINGS {empty} \
+  CONFIG.USER_CLK_FREQ0 {100.0} \
+  CONFIG.USER_CLK_FREQ1 {100.0} \
+  CONFIG.USER_CLK_FREQ2 {100.0} \
+  CONFIG.USER_CLK_FREQ3 {100.0} \
+  CONFIG.USE_BOARD_FLOW {false} \
+  CONFIG.USE_CLKFB_STOPPED {false} \
+  CONFIG.USE_CLK_VALID {false} \
+  CONFIG.USE_CLOCK_SEQUENCING {false} \
+  CONFIG.USE_DYN_PHASE_SHIFT {false} \
+  CONFIG.USE_DYN_RECONFIG {false} \
+  CONFIG.USE_FREEZE {false} \
+  CONFIG.USE_FREQ_SYNTH {true} \
+  CONFIG.USE_INCLK_STOPPED {false} \
+  CONFIG.USE_INCLK_SWITCHOVER {false} \
+  CONFIG.USE_LOCKED {true} \
+  CONFIG.USE_MAX_I_JITTER {false} \
+  CONFIG.USE_MIN_O_JITTER {false} \
+  CONFIG.USE_MIN_POWER {false} \
+  CONFIG.USE_PHASE_ALIGNMENT {true} \
+  CONFIG.USE_POWER_DOWN {false} \
+  CONFIG.USE_RESET {true} \
+  CONFIG.USE_SAFE_CLOCK_STARTUP {false} \
+  CONFIG.USE_SPREAD_SPECTRUM {false} \
+  CONFIG.USE_STATUS {false} \
+  CONFIG.intr.PortWidth {1} \
+  CONFIG.intr.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.ref_clk.ASSOCIATED_BUSIF {} \
+  CONFIG.ref_clk.ASSOCIATED_PORT {} \
+  CONFIG.ref_clk.ASSOCIATED_RESET {} \
+  CONFIG.ref_clk.CLK_DOMAIN {} \
+  CONFIG.ref_clk.FREQ_HZ {100000000} \
+  CONFIG.ref_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.ref_clk.INSERT_VIP {0} \
+  CONFIG.ref_clk.PHASE {0.000} \
+  CONFIG.reset.BOARD.ASSOCIATED_PARAM {RESET_BOARD_INTERFACE} \
+  CONFIG.reset.INSERT_VIP {0} \
+  CONFIG.reset.POLARITY {ACTIVE_HIGH} \
+  CONFIG.resetn.BOARD.ASSOCIATED_PARAM {RESET_BOARD_INTERFACE} \
+  CONFIG.resetn.INSERT_VIP {0} \
+  CONFIG.resetn.POLARITY {ACTIVE_LOW} \
+  CONFIG.s_axi_aclk.ASSOCIATED_BUSIF {s_axi_lite} \
+  CONFIG.s_axi_aclk.ASSOCIATED_PORT {} \
+  CONFIG.s_axi_aclk.ASSOCIATED_RESET {s_axi_aresetn} \
+  CONFIG.s_axi_aclk.CLK_DOMAIN {} \
+  CONFIG.s_axi_aclk.FREQ_HZ {100000000} \
+  CONFIG.s_axi_aclk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.s_axi_aclk.INSERT_VIP {0} \
+  CONFIG.s_axi_aclk.PHASE {0.000} \
+  CONFIG.s_axi_lite.ADDR_WIDTH {1} \
+  CONFIG.s_axi_lite.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.BUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.CLK_DOMAIN {} \
+  CONFIG.s_axi_lite.DATA_WIDTH {1} \
+  CONFIG.s_axi_lite.FREQ_HZ {100000000} \
+  CONFIG.s_axi_lite.HAS_BRESP {0} \
+  CONFIG.s_axi_lite.HAS_BURST {0} \
+  CONFIG.s_axi_lite.HAS_CACHE {0} \
+  CONFIG.s_axi_lite.HAS_LOCK {0} \
+  CONFIG.s_axi_lite.HAS_PROT {0} \
+  CONFIG.s_axi_lite.HAS_QOS {0} \
+  CONFIG.s_axi_lite.HAS_REGION {0} \
+  CONFIG.s_axi_lite.HAS_RRESP {0} \
+  CONFIG.s_axi_lite.HAS_WSTRB {0} \
+  CONFIG.s_axi_lite.ID_WIDTH {0} \
+  CONFIG.s_axi_lite.INSERT_VIP {0} \
+  CONFIG.s_axi_lite.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_lite.NUM_READ_OUTSTANDING {1} \
+  CONFIG.s_axi_lite.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_lite.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.s_axi_lite.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_lite.PHASE {0.000} \
+  CONFIG.s_axi_lite.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_lite.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_lite.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_lite.RUSER_WIDTH {0} \
+  CONFIG.s_axi_lite.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_lite.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_lite.WUSER_WIDTH {0} \
+  CONFIG.s_axi_resetn.ASSOCIATED_RESET {aresetn} \
+  CONFIG.s_axi_resetn.INSERT_VIP {0} \
+  CONFIG.s_axi_resetn.POLARITY {ACTIVE_LOW} " [get_ips dcm40_to_160]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 24 18:52:13 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT7TDP'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT7TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 24 18:51:46 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT11TDP'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT11TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:29:03 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT7TDP'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT7TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:28:21 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT11TDP'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT11TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:27:37 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT14TDP_BW'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT14TDP_BW (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:27:07 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT_ptTDP'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of LUT_ptTDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value 'true' on parameter 'Load Init File' due to the following failure - 
+Validation failed for parameter 'Coe File(Coe_File)' with value 'no_coe_file_loaded' for IP 'LUT_ptTDP'. No COE file loaded
+. Restoring to an old valid value of 'false'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 -user_name LUT_ptTDP
+set_property -dict "\
+  CONFIG.AXILite_SLAVE_S_AXI.ADDR_WIDTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.ARUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.AWUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.BUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.CLK_DOMAIN {} \
+  CONFIG.AXILite_SLAVE_S_AXI.DATA_WIDTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.FREQ_HZ {100000000} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_BRESP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_BURST {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_CACHE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_LOCK {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_PROT {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_QOS {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_REGION {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_RRESP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_WSTRB {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.ID_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.INSERT_VIP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_READ_THREADS {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.PHASE {0.000} \
+  CONFIG.AXILite_SLAVE_S_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.AXILite_SLAVE_S_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXILite_SLAVE_S_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.RUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.WUSER_WIDTH {0} \
+  CONFIG.AXI_ID_Width {4} \
+  CONFIG.AXI_SLAVE_S_AXI.ADDR_WIDTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.ARUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.AWUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.BUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.CLK_DOMAIN {} \
+  CONFIG.AXI_SLAVE_S_AXI.DATA_WIDTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.FREQ_HZ {100000000} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_BRESP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_BURST {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_CACHE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_LOCK {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_PROT {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_QOS {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_REGION {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_RRESP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_WSTRB {0} \
+  CONFIG.AXI_SLAVE_S_AXI.ID_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.INSERT_VIP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_READ_THREADS {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_SLAVE_S_AXI.PHASE {0.000} \
+  CONFIG.AXI_SLAVE_S_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_SLAVE_S_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_SLAVE_S_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.RUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_SLAVE_S_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.WUSER_WIDTH {0} \
+  CONFIG.AXI_Slave_Type {Memory_Slave} \
+  CONFIG.AXI_Type {AXI4_Full} \
+  CONFIG.Additional_Inputs_for_Power_Estimation {false} \
+  CONFIG.Algorithm {Minimum_Area} \
+  CONFIG.Assume_Synchronous_Clk {false} \
+  CONFIG.BRAM_PORTA.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTA.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTA.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTA.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTA.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTA.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTB.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTB.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTB.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTB.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTB.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTB.READ_WRITE_MODE {} \
+  CONFIG.Byte_Size {9} \
+  CONFIG.CLK.ACLK.ASSOCIATED_BUSIF {AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI} \
+  CONFIG.CLK.ACLK.ASSOCIATED_PORT {} \
+  CONFIG.CLK.ACLK.ASSOCIATED_RESET {s_aresetn} \
+  CONFIG.CLK.ACLK.CLK_DOMAIN {} \
+  CONFIG.CLK.ACLK.FREQ_HZ {100000000} \
+  CONFIG.CLK.ACLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.CLK.ACLK.INSERT_VIP {0} \
+  CONFIG.CLK.ACLK.PHASE {0.000} \
+  CONFIG.CTRL_ECC_ALGO {NONE} \
+  CONFIG.Coe_File {../../../coe/pt_merger_new.coe} \
+  CONFIG.Collision_Warnings {ALL} \
+  CONFIG.Component_Name {LUT_ptTDP} \
+  CONFIG.Disable_Collision_Warnings {false} \
+  CONFIG.Disable_Out_of_Range_Warnings {false} \
+  CONFIG.ECC {false} \
+  CONFIG.EN_DEEPSLEEP_PIN {false} \
+  CONFIG.EN_ECC_PIPE {false} \
+  CONFIG.EN_SAFETY_CKT {false} \
+  CONFIG.EN_SHUTDOWN_PIN {false} \
+  CONFIG.EN_SLEEP_PIN {false} \
+  CONFIG.Enable_32bit_Address {false} \
+  CONFIG.Enable_A {Use_ENA_Pin} \
+  CONFIG.Enable_B {Use_ENB_Pin} \
+  CONFIG.Error_Injection_Type {Single_Bit_Error_Injection} \
+  CONFIG.Fill_Remaining_Memory_Locations {false} \
+  CONFIG.Interface_Type {Native} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.MEM_FILE {no_mem_loaded} \
+  CONFIG.Memory_Type {True_Dual_Port_RAM} \
+  CONFIG.Operating_Mode_A {WRITE_FIRST} \
+  CONFIG.Operating_Mode_B {WRITE_FIRST} \
+  CONFIG.Output_Reset_Value_A {0} \
+  CONFIG.Output_Reset_Value_B {0} \
+  CONFIG.PRIM_type_to_Implement {BRAM} \
+  CONFIG.Pipeline_Stages {0} \
+  CONFIG.Port_A_Clock {100} \
+  CONFIG.Port_A_Enable_Rate {100} \
+  CONFIG.Port_A_Write_Rate {50} \
+  CONFIG.Port_B_Clock {100} \
+  CONFIG.Port_B_Enable_Rate {100} \
+  CONFIG.Port_B_Write_Rate {50} \
+  CONFIG.Primitive {8kx2} \
+  CONFIG.RD_ADDR_CHNG_A {false} \
+  CONFIG.RD_ADDR_CHNG_B {false} \
+  CONFIG.READ_LATENCY_A {1} \
+  CONFIG.READ_LATENCY_B {1} \
+  CONFIG.RST.ARESETN.INSERT_VIP {0} \
+  CONFIG.RST.ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.Read_Width_A {5} \
+  CONFIG.Read_Width_B {5} \
+  CONFIG.Register_PortA_Output_of_Memory_Core {false} \
+  CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+  CONFIG.Register_PortB_Output_of_Memory_Core {false} \
+  CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+  CONFIG.Remaining_Memory_Locations {0} \
+  CONFIG.Reset_Memory_Latch_A {false} \
+  CONFIG.Reset_Memory_Latch_B {false} \
+  CONFIG.Reset_Priority_A {CE} \
+  CONFIG.Reset_Priority_B {CE} \
+  CONFIG.Reset_Type {SYNC} \
+  CONFIG.Use_AXI_ID {false} \
+  CONFIG.Use_Byte_Write_Enable {false} \
+  CONFIG.Use_Error_Injection_Pins {false} \
+  CONFIG.Use_REGCEA_Pin {false} \
+  CONFIG.Use_REGCEB_Pin {false} \
+  CONFIG.Use_RSTA_Pin {false} \
+  CONFIG.Use_RSTB_Pin {false} \
+  CONFIG.Write_Depth_A {4096} \
+  CONFIG.Write_Width_A {5} \
+  CONFIG.Write_Width_B {5} \
+  CONFIG.ecctype {No_ECC} \
+  CONFIG.register_porta_input_of_softecc {false} \
+  CONFIG.register_portb_output_of_softecc {false} \
+  CONFIG.softecc {false} \
+  CONFIG.use_bram_block {Stand_Alone} " [get_ips LUT_ptTDP]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:26:33 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT14TDP'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of LUT14TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+The normal upgrade process failed due to validation failures in the given configuration. Attempting partial upgrade to set as many user parameters as possible. Please check the parameters whose values were not applied.
+
+Unable to set the value 'true' on parameter 'Load Init File' due to the following failure - 
+Validation failed for parameter 'Coe File(Coe_File)' with value 'no_coe_file_loaded' for IP 'LUT14TDP'. No COE file loaded
+. Restoring to an old valid value of 'false'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 -user_name LUT14TDP
+set_property -dict "\
+  CONFIG.AXILite_SLAVE_S_AXI.ADDR_WIDTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.ARUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.AWUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.BUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.CLK_DOMAIN {} \
+  CONFIG.AXILite_SLAVE_S_AXI.DATA_WIDTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.FREQ_HZ {100000000} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_BRESP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_BURST {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_CACHE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_LOCK {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_PROT {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_QOS {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_REGION {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_RRESP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.HAS_WSTRB {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.ID_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.INSERT_VIP {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_READ_THREADS {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.AXILite_SLAVE_S_AXI.PHASE {0.000} \
+  CONFIG.AXILite_SLAVE_S_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.AXILite_SLAVE_S_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXILite_SLAVE_S_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.RUSER_WIDTH {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXILite_SLAVE_S_AXI.WUSER_WIDTH {0} \
+  CONFIG.AXI_ID_Width {4} \
+  CONFIG.AXI_SLAVE_S_AXI.ADDR_WIDTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.ARUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.AWUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.BUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.CLK_DOMAIN {} \
+  CONFIG.AXI_SLAVE_S_AXI.DATA_WIDTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.FREQ_HZ {100000000} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_BRESP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_BURST {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_CACHE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_LOCK {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_PROT {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_QOS {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_REGION {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_RRESP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.HAS_WSTRB {0} \
+  CONFIG.AXI_SLAVE_S_AXI.ID_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.INSERT_VIP {0} \
+  CONFIG.AXI_SLAVE_S_AXI.MAX_BURST_LENGTH {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_READ_OUTSTANDING {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_READ_THREADS {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_WRITE_OUTSTANDING {1} \
+  CONFIG.AXI_SLAVE_S_AXI.NUM_WRITE_THREADS {1} \
+  CONFIG.AXI_SLAVE_S_AXI.PHASE {0.000} \
+  CONFIG.AXI_SLAVE_S_AXI.PROTOCOL {AXI4LITE} \
+  CONFIG.AXI_SLAVE_S_AXI.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.AXI_SLAVE_S_AXI.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.RUSER_WIDTH {0} \
+  CONFIG.AXI_SLAVE_S_AXI.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.AXI_SLAVE_S_AXI.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.AXI_SLAVE_S_AXI.WUSER_WIDTH {0} \
+  CONFIG.AXI_Slave_Type {Memory_Slave} \
+  CONFIG.AXI_Type {AXI4_Full} \
+  CONFIG.Additional_Inputs_for_Power_Estimation {false} \
+  CONFIG.Algorithm {Minimum_Area} \
+  CONFIG.Assume_Synchronous_Clk {false} \
+  CONFIG.BRAM_PORTA.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTA.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTA.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTA.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTA.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTA.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTB.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTB.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTB.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTB.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTB.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTB.READ_WRITE_MODE {} \
+  CONFIG.Byte_Size {9} \
+  CONFIG.CLK.ACLK.ASSOCIATED_BUSIF {AXI_SLAVE_S_AXI:AXILite_SLAVE_S_AXI} \
+  CONFIG.CLK.ACLK.ASSOCIATED_PORT {} \
+  CONFIG.CLK.ACLK.ASSOCIATED_RESET {s_aresetn} \
+  CONFIG.CLK.ACLK.CLK_DOMAIN {} \
+  CONFIG.CLK.ACLK.FREQ_HZ {100000000} \
+  CONFIG.CLK.ACLK.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.CLK.ACLK.INSERT_VIP {0} \
+  CONFIG.CLK.ACLK.PHASE {0.000} \
+  CONFIG.CTRL_ECC_ALGO {NONE} \
+  CONFIG.Coe_File {../../../coe/testLUT_NSW_ang_testbench.coe} \
+  CONFIG.Collision_Warnings {ALL} \
+  CONFIG.Component_Name {LUT14TDP} \
+  CONFIG.Disable_Collision_Warnings {false} \
+  CONFIG.Disable_Out_of_Range_Warnings {false} \
+  CONFIG.ECC {false} \
+  CONFIG.EN_DEEPSLEEP_PIN {false} \
+  CONFIG.EN_ECC_PIPE {false} \
+  CONFIG.EN_SAFETY_CKT {false} \
+  CONFIG.EN_SHUTDOWN_PIN {false} \
+  CONFIG.EN_SLEEP_PIN {false} \
+  CONFIG.Enable_32bit_Address {false} \
+  CONFIG.Enable_A {Use_ENA_Pin} \
+  CONFIG.Enable_B {Use_ENB_Pin} \
+  CONFIG.Error_Injection_Type {Single_Bit_Error_Injection} \
+  CONFIG.Fill_Remaining_Memory_Locations {false} \
+  CONFIG.Interface_Type {Native} \
+  CONFIG.Load_Init_File {true} \
+  CONFIG.MEM_FILE {no_mem_loaded} \
+  CONFIG.Memory_Type {True_Dual_Port_RAM} \
+  CONFIG.Operating_Mode_A {WRITE_FIRST} \
+  CONFIG.Operating_Mode_B {WRITE_FIRST} \
+  CONFIG.Output_Reset_Value_A {0} \
+  CONFIG.Output_Reset_Value_B {0} \
+  CONFIG.PRIM_type_to_Implement {BRAM} \
+  CONFIG.Pipeline_Stages {0} \
+  CONFIG.Port_A_Clock {100} \
+  CONFIG.Port_A_Enable_Rate {100} \
+  CONFIG.Port_A_Write_Rate {50} \
+  CONFIG.Port_B_Clock {100} \
+  CONFIG.Port_B_Enable_Rate {100} \
+  CONFIG.Port_B_Write_Rate {50} \
+  CONFIG.Primitive {8kx2} \
+  CONFIG.RD_ADDR_CHNG_A {false} \
+  CONFIG.RD_ADDR_CHNG_B {false} \
+  CONFIG.READ_LATENCY_A {1} \
+  CONFIG.READ_LATENCY_B {1} \
+  CONFIG.RST.ARESETN.INSERT_VIP {0} \
+  CONFIG.RST.ARESETN.POLARITY {ACTIVE_LOW} \
+  CONFIG.Read_Width_A {4} \
+  CONFIG.Read_Width_B {4} \
+  CONFIG.Register_PortA_Output_of_Memory_Core {false} \
+  CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+  CONFIG.Register_PortB_Output_of_Memory_Core {false} \
+  CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+  CONFIG.Remaining_Memory_Locations {0} \
+  CONFIG.Reset_Memory_Latch_A {false} \
+  CONFIG.Reset_Memory_Latch_B {false} \
+  CONFIG.Reset_Priority_A {CE} \
+  CONFIG.Reset_Priority_B {CE} \
+  CONFIG.Reset_Type {SYNC} \
+  CONFIG.Use_AXI_ID {false} \
+  CONFIG.Use_Byte_Write_Enable {false} \
+  CONFIG.Use_Error_Injection_Pins {false} \
+  CONFIG.Use_REGCEA_Pin {false} \
+  CONFIG.Use_REGCEB_Pin {false} \
+  CONFIG.Use_RSTA_Pin {false} \
+  CONFIG.Use_RSTB_Pin {false} \
+  CONFIG.Write_Depth_A {16384} \
+  CONFIG.Write_Width_A {4} \
+  CONFIG.Write_Width_B {4} \
+  CONFIG.ecctype {No_ECC} \
+  CONFIG.register_porta_input_of_softecc {false} \
+  CONFIG.register_portb_output_of_softecc {false} \
+  CONFIG.softecc {false} \
+  CONFIG.use_bram_block {Stand_Alone} " [get_ips LUT14TDP]
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Jan 17 22:26:10 2023
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT13TDP'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT13TDP (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Dec 14 16:46:26 2022
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xcu200-fsgd2104-2-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT14TDP_BW'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of LUT14TDP_BW (xilinx.com:ip:blk_mem_gen:8.4 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Wed Dec 14 14:00:49 2022
+| Host         : accel1 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Command      : upgrade_ip
+| Device       : xc7vx485tffg1157-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'LUT14TDP_BW'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of LUT14TDP_BW (xilinx.com:ip:blk_mem_gen:8.4) from (Rev. 4) to (Rev. 5)
+
